@@ -1,0 +1,27 @@
+{
+  "name": "Demo-ES6-Babel-Node-VSCode",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec 'babel-node --inspect=0.0.0.0 src/server.js'",
+    "build": "rm -rf dist && babel src --out-dir dist && cp -r ./src/public ./dist && cp -r ./src/views ./dist",
+    "serve": "node dist/server.js"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.17.1"
+  }
+}
